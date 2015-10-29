@@ -24,12 +24,12 @@ var becky = new Nanny({name: "Hot Becky", points: 10});
 var crystal = new Nanny({name: "ex-stripper Crystal", points: 6});
 var jane = new Nanny({name: "Plain Jane", points: 2});
 
-var counter = [] ;
-
-var addPoints = function(item) {
-  counter.push(item.points);
-  var total = math.sum(item.points);
-};
+// var counter = [] ;
+//
+// var addPoints = function(item) {
+//   counter.push(item.points);
+//   var total = math.sum(item.points);
+// };
 
 function Housewife(options) {
   this.name = options.name || "middle-aged housewife";
@@ -68,7 +68,7 @@ function DrinkOfChoice(options){
   this.points = options.points || 0;
   this.drinktoForget = function(housewife) {
   (housewife.points = (housewife.points + this.points));
-    if (housewife.points >= 50) {
+    if (housewife.points > 50) {
       console.log('you doin okay');
     }
     return housewife.points;
@@ -85,14 +85,11 @@ function Nanny(options) {
   this.useHotness = function(housewife) {
     housewife.points = (housewife.points - this.points);
     if(housewife.points < 10) {
-      console.log('bitch dead');
-    }
-    if (housewife.points > 50) {
-      console.log('you doin okay');
-    }
+      console.log('bitch dead');}
 return housewife.points;
   };
 }
+
 
 
 Housewife.dailyagenda = function(food, drink) {
@@ -101,6 +98,8 @@ Housewife.dailyagenda = function(food, drink) {
      else { return ("Even alcohol can't solve all of your problems.");}
 };
 
-function playAgain() {
-
-}
+// function playAgain() {
+//   if (housewife.points > 50) {
+//     console.log('you doin okay');
+//   }
+// }
