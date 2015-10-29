@@ -1,0 +1,38 @@
+body {
+  background-color: pink;
+  font-family: 'Nixie One'; }
+
+.hidden {
+  display: none; }
+
+.page1 {
+  width: 100%; }
+  .page1 img {
+    width: 75%;
+    border: 10px solid #ff3b80;
+    margin-left: 166px;
+    margin-top: 20px;
+    border-radius: 300px;
+    margin-bottom: 50px; }
+  .page1 h1 {
+    margin-left: 300px;
+    color: white;
+    font-family: 'Nixie One'; }
+  .page1 button {
+    margin-left: 600px;
+    font-size: 30px;
+    font-family: 'Nixie One';
+    border-radius: 20px; }
+
+.page2 .mdl-button {
+  font-family: 'Nixie One';
+  margin-bottom: 30px;
+  margin-left: 140px;
+  margin-top: 77px;
+  border-radius: 20px; }
+
+.demo-card-image {
+  margin-left: 100px;
+  margin-bottom: 20px;
+  border-radius: 100px;
+  margin-bottom: 20px; }

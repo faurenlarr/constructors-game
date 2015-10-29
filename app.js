@@ -2,9 +2,9 @@
 
 
 
-var sandra = new Housewife({name: "Sandra", age: 38, kids: "2 kids", points: 20});
-var patricia = new Housewife({name: "Patricia", age: 40, kids: "4 kids", points: 15});
-var janet = new Housewife({name: "Janet", age: 34, kids: "6 kids", job: "secretary", points:15});
+var sandra = new Housewife({name: "Sandra", age: 38, kids: "2 kids", points: 20, image: "http://hate.it/site/assets/files/4464/kim-kardashian2.710x0d0x0.jpg" });
+var patricia = new Housewife({name: "Patricia", age: 40, kids: "4 kids", points: 15, image: "http://www.prettydesigns.com/wp-content/uploads/2013/11/Paris-Hilton-Hairstyles-Lovely-Side-parted-Medium-Haircut.jpg"});
+var janet = new Housewife({name: "Janet", age: 34, kids: "6 kids", job: "secretary", points:15, image: "http://img.thesun.co.uk/aidemitlum/archive/01747/BRITNEY-SPEARS-MAI_1747542a.jpg"});
 
 var pizza = new WhatsForDinner({name:"pizza!", temp: "warm", howold: "fresh", points: 25});
 var leftovers = new WhatsForDinner({name: "yucky leftovers", temp:" cold of course", howold:"kinda old...", points: -10});
@@ -37,6 +37,8 @@ function Housewife(options) {
   this.kids = options.kids || "2 kids";
   this.job = options.job || "home-maker";
   this.points = options.points || 0;
+  this.image = options.image ;
+ $(".housewives").append(housewifeTemplate(this));
   if (this.points < 5) {
     console.log("BITCH DEAD");
   }
@@ -103,3 +105,21 @@ Housewife.dailyagenda = function(food, drink) {
 //     console.log('you doin okay');
 //   }
 // }
+
+$('.page1').on('click', 'button',function(){
+  $('.page1').addClass('hidden');
+  $('.page2').removeClass('hidden');
+});
+
+// page 2
+
+$('.page2').on('click', '.demo-card-image ', function (){
+$('.page2').addClass('hidden');
+  $('.page3').removeClass('hidden');
+});
+// $(".slidein").slide(1000).delay(1000).show();
+
+//page 3
+
+
+// $('.food').append()

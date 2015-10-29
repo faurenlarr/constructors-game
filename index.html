@@ -3,14 +3,95 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="bower_components/material-design-lite/material.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico|Nixie+One' rel='stylesheet' type='text/css'>
+    <script type="text/html" id="housewifeTmpl">
+
+    <style>
+    .demo-card-image.mdl-card#<%=name%>{
+      width: 256px;
+      height: 256px;
+      background: url(<%= image %>) center / cover;
+    }
+    .demo-card-image > .mdl-card__actions {
+      height: 52px;
+      padding: 16px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .demo-card-image__filename {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    </style>
+
+    <div class="demo-card-image mdl-card mdl-shadow--2dp" id="<%=name%>">
+      <div class="mdl-card__title mdl-card--expand"></div>
+      <div class="mdl-card__actions">
+        <span class="demo-card-image__filename"><%= name %></span>
+      </div>
+    </div>
+
+    </script>
   </head>
   <body>
 
+<section class="container">
+
+<section class="page1 default">
 
 
+          <h1>The Middle-Aged HouseWife Game</h1>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+          OMG, Let's Play!
+          </button>
+          <img src="http://lmaolyfe.com/wp-content/uploads/2015/07/tumblr_m5sdvhN6Rn1r1wdpvo1_500.gif" alt="">
+
+</section>
+
+<section class="page2 hidden">
+
+            <div class="pick">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+              <p>Pick your housewife!</p>
+              </button>
+            </div>
+
+          <div class="housewives">
+
+          </div>
+
+</section>
 
 
+<section class="page3">
+
+<div class="food">
+
+</div>
+
+<div class="weapon">
+
+</div>
+
+<div class="drink">
+
+</div>
+
+</section>
+
+
+<section class="page4">
+
+
+</section>
+
+</section> <!--end of container-->
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="temp.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
-    
   </body>
 </html>
