@@ -2,17 +2,20 @@
 
 
 
+
+var clicks = 0;
+var player;
 var sandra = new Housewife({name: "Sandra", age: 38, kids: "2 kids", points: 10, image: "http://hate.it/site/assets/files/4464/kim-kardashian2.710x0d0x0.jpg" });
 var patricia = new Housewife({name: "Patricia", age: 40, kids: "4 kids", points: 10, job: "Mary-Kay sales rep", image: "http://www.prettydesigns.com/wp-content/uploads/2013/11/Paris-Hilton-Hairstyles-Lovely-Side-parted-Medium-Haircut.jpg"});
-var janet = new Housewife({name: "Janet", age: 34, kids: "6 kids", job: "secretary", points:10, image: "http://img.thesun.co.uk/aidemitlum/archive/01747/BRITNEY-SPEARS-MAI_1747542a.jpg"});
+var janet = new Housewife({name: "Janet", age: 30, kids: "6 kids", job: "secretary", points:10, image: "http://img.thesun.co.uk/aidemitlum/archive/01747/BRITNEY-SPEARS-MAI_1747542a.jpg"});
 
 var pizza = new WhatsForDinner({name: "pizza", title:"pizza!", temp: "warm", howold: "fresh", points: 25, image: "http://cache.boston.com/bonzai-fba/Original_Photo/2011/11/23/pizza__1322067494_5957.jpg"});
 var leftovers = new WhatsForDinner({name: "leftovers", title: "leftovers", temp:" cold of course", howold:"kinda old...", points: -10 , image: "http://hartfc.digitalreachopm.netdna-cdn.com/wp-content/uploads/2015/08/leftovers-can-lead-to-food-waste.jpg?55b424"});
-var vegetables = new WhatsForDinner ({name: "veg", title: "vegetables", points: 5, image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ5LIY3DeoJOBj3C9Lg1fso4nsTl2aR4nqcBtRrtD12YhtmrzvH"});
+var vegetables = new WhatsForDinner ({name: "veg", title: "Healthy greens", points: 5, image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ5LIY3DeoJOBj3C9Lg1fso4nsTl2aR4nqcBtRrtD12YhtmrzvH"});
 
 var vacuum = new HouseHoldWeapon({name: "vacuum", title: "vacuum", points: 15, image:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTlEr7ZpjNwCB3qGn2nrZVzmxEb-9yod4SjkAPXIqr5nw10sYzr"});
 var swiffer = new HouseHoldWeapon({name: "swiffer",  title: "Swiffer", points: 20, image:"http://www.adweek.com/agencyspy/files/2011/11/swiffer1-300x300.jpg"});
-var oldmop = new HouseHoldWeapon({name: "mop", title: "smelly mop",points: -15, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg9YdnWE1UhM0CZk5uDJfouGdGIQXDlGGyAEYz3KlVaT7yUcQq"});
+var mop = new HouseHoldWeapon({name: "mop", title: "mop",points: -15, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg9YdnWE1UhM0CZk5uDJfouGdGIQXDlGGyAEYz3KlVaT7yUcQq"});
 
 var vodka = new DrinkOfChoice({name: "tequila", title: "tequila shots!",points: 20, image: "http://a57.foxnews.com/global.fncstatic.com/static/managed/img/fn2/video/876/493/tequila_640.jpg?ve=1&tl=1"});
 var wine = new DrinkOfChoice({name: "wine", title: "pinot grigio",points: 5, image: "http://captaincrab.org/wp-content/uploads/2015/06/pinot.jpg"});
@@ -24,12 +27,13 @@ var becky = new Nanny({name: "becky",title: "Hot Becky", points: 10, image: "htt
 var crystal = new Nanny({name: "crystal", title: "ex-stripper Crystal", points: 6, image: "https://cbsla.files.wordpress.com/2011/03/53250786.jpg"});
 var martha = new Nanny({name: "martha",title: "Martha", points: 2, image: "http://img3.wikia.nocookie.net/__cb20131102071400/americanhorrorstory/de/images/b/ba/American-horror-story-moira-669.gif"});
 
-// var counter = [] ;
-//
-// var addPoints = function(item) {
-//   counter.push(item.points);
-//   var total = math.sum(item.points);
-// };
+
+$('body').on('click', '.demo-card-image', function(){
+  clicks++;
+} );
+
+// when clicks ===5 ....
+
 
 function Housewife(options) {
   this.name = options.name || "middle-aged housewife";
@@ -52,10 +56,14 @@ function WhatsForDinner(options) {
   this.image = options.image;
   this.title = options.title;
   $("#food").append(foodTemplate(this));
+  if (this.points < 5) {
+    console.log("BITCH DEAD");
+  }
   this.usetoFeed = function(housewife) {
     return (housewife.points = (housewife.points + this.points));
 
   };
+
 
 }
 
@@ -66,6 +74,9 @@ function HouseHoldWeapon(options){
   this.image = options.image;
   this.title = options.title;
   $("#weapon").append(weaponTemplate(this));
+  if (this.points < 5) {
+    console.log("BITCH DEAD");
+  }
   this.usetoClean = function(housewife) {
     return (housewife.points = (housewife.points + this.points));
   };
@@ -77,12 +88,14 @@ function DrinkOfChoice(options){
   this.title = options.title;
   this.image = options.image;
   $("#drink").append(drinkTemplate(this));
-
+  if (this.points < 5) {
+    console.log("BITCH DEAD");
+  }
   this.drinktoForget = function(housewife) {
   (housewife.points = (housewife.points + this.points));
-    if (housewife.points > 50) {
-      console.log('you doin okay');
-    }
+    // if (housewife.points > 50) {
+    //   console.log('you doin okay');
+    // }
     return housewife.points;
   };
 
@@ -97,19 +110,13 @@ function Nanny(options) {
 
   this.useHotness = function(housewife) {
     housewife.points = (housewife.points - this.points);
-    if(housewife.points < 10) {
-      console.log('bitch dead');}
+    if(housewife.points < 5) {
+      console.log('BITCH DEAD');}
 return housewife.points;
   };
 }
 
 
-
-// Housewife.dailyagenda = function(food, drink) {
-//     if( vodka.name === "shots of vodka" || wine.name === "wine drunk")
-//       {return ("Forget all of your problems!");}
-//      else { return ("Even alcohol can't solve all of your problems.");}
-// };
 
 
 
@@ -122,40 +129,45 @@ $('.page1').on('click', 'button',function(){
 
 $('#Sandra').on('click', function (){             //housewives clicks
   $(this).siblings().toggleClass('hidden');
+  player = sandra;
 
 });
 $('#Patricia').on('click', function (){
   $(this).siblings().toggleClass('hidden');
-
+    player= patricia;
 });
 $('#Janet').on('click', function (){
   $(this).siblings().toggleClass('hidden');
-
+    player= janet;
 });
 
 $('#pizza').on('click', function (){
-  $(this).siblings().toggleClass('hidden');    //food clicks
+  $(this).siblings().toggleClass('hidden');
+  player.points += pizza.points;              //food clicks
 
 });
 $('#leftovers').on('click', function (){
   $(this).siblings().toggleClass('hidden');
-
+  player.points += leftovers.points;
 });
 $('#veg').on('click', function (){
   $(this).siblings().toggleClass('hidden');
-
+  player.points += vegetables.points;
 });
 
 $('#vacuum').on('click', function (){
   $(this).siblings().toggleClass('hidden');         //weapon clicks
+  player.points += vacuum.points;
 
 });
 $('#swiffer').on('click', function (){
   $(this).siblings().toggleClass('hidden');
+  player.points += swiffer.points;
 
 });
 $('#mop').on('click', function (){
   $(this).siblings().toggleClass('hidden');
+  player.points += mop.points;
 
 });
 
@@ -171,40 +183,55 @@ $('.page2').addClass('hidden');
 $('#becky').on('click', function (){     // nanny clicks
 $('#crystal').addClass('hidden');
   $('#martha').addClass('hidden');
+  player.points -= becky.points;
+
+
 });
 $('#crystal').on('click', function (){
 $('#becky').addClass('hidden');
   $('#martha').addClass('hidden');
+player.points -= crystal.points;
+
 });
 $('#martha').on('click', function (){
 $('#crystal').addClass('hidden');
   $('#becky').addClass('hidden');
+  player.points -= martha.points;
+
 });
 
 $('#cosmo').on('click', function (){     // alchohol clicks
 $('#wine').addClass('hidden');
   $('#tequila').addClass('hidden');
   $('#water').addClass('hidden');
+  player.points += cosmo.points;
+
 
 });
 $('#wine').on('click', function (){
 $('#cosmo').addClass('hidden');
   $('#tequila').addClass('hidden');
   $('#water').addClass('hidden');
+  player.points += wine.points;
 
 });
 $('#water').on('click', function (){
 $('#wine').addClass('hidden');
   $('#tequila').addClass('hidden');
   $('#cosmo').addClass('hidden');
+  player.points += water.points;
 
 });
 $('#tequila').on('click', function (){
 $('#wine').addClass('hidden');
   $('#water').addClass('hidden');
   $('#cosmo').addClass('hidden');
+  player.points += tequila.points;
 
 });
 
+                        // click button for total points
+$('.points').on('click', function (){
+$('.totalpoints').text(player.points);
 
-// $('.food').append()
+});
