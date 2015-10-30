@@ -1,6 +1,6 @@
 body {
-  background-color: pink;
-  font-family: 'Nixie One'; }
+  background-color: #ff6562;
+  font-family: 'Sycopate'; }
 
 .hidden {
   display: none; }
@@ -8,31 +8,41 @@ body {
 .page1 {
   width: 100%; }
   .page1 img {
-    width: 75%;
-    border: 10px solid #ff3b80;
-    margin-left: 166px;
+    width: 60%;
+    border: 10px solid white;
+    margin-left: 265px;
     margin-top: 20px;
-    border-radius: 300px;
+    border-radius: 350px;
     margin-bottom: 50px; }
   .page1 h1 {
-    margin-left: 300px;
+    margin-top: 60px;
+    margin-left: 240px;
     color: white;
-    font-family: 'Nixie One'; }
+    font-family: 'Syncopate';
+    font-size: 40px; }
   .page1 button {
     margin-left: 600px;
-    font-size: 30px;
-    font-family: 'Nixie One';
-    border-radius: 20px; }
-
-.page2 .mdl-button {
-  font-family: 'Nixie One';
-  margin-bottom: 30px;
-  margin-left: 140px;
-  margin-top: 77px;
-  border-radius: 20px; }
+    font-size: 20px;
+    font-family: 'Syncopate';
+    border-radius: 20px;
+    color: white;
+    margin-top: 10px; }
 
 .demo-card-image {
   margin-left: 100px;
   margin-bottom: 20px;
-  border-radius: 100px;
   margin-bottom: 20px; }
+
+.mdl-button {
+  font-family: 'Syncopate';
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-left: 120px;
+  margin-top: 77px;
+  border-radius: 20px;
+  color: pink; }
+  .mdl-button p {
+    padding-top: 5px; }
+
+.mdl-grid {
+  margin-top: -57px; }

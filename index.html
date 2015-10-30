@@ -5,37 +5,166 @@
     <title></title>
     <link rel="stylesheet" href="bower_components/material-design-lite/material.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="style.css">
-  <link href='https://fonts.googleapis.com/css?family=Pacifico|Nixie+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
     <script type="text/html" id="housewifeTmpl">
 
     <style>
     .demo-card-image.mdl-card#<%=name%>{
-      width: 256px;
-      height: 256px;
+      width: 260px;
+      height: 260px;
       background: url(<%= image %>) center / cover;
+      border-radius: 10px;
     }
     .demo-card-image > .mdl-card__actions {
       height: 52px;
-      padding: 16px;
-      background: rgba(0, 0, 0, 0.2);
+      padding-bottom: 25px;
+      background: #ededed;
     }
     .demo-card-image__filename {
-      color: #fff;
-      font-size: 14px;
+      color: #ff6562;
+      /*font-size: 8px;*/
       font-weight: 500;
+      font-family: 'Syncopate';
     }
     </style>
 
     <div class="demo-card-image mdl-card mdl-shadow--2dp" id="<%=name%>">
       <div class="mdl-card__title mdl-card--expand"></div>
       <div class="mdl-card__actions">
-        <span class="demo-card-image__filename"><%= name %></span>
+        <span class="demo-card-image__filename"><%= name %> | <%= job %><br><%= age %></span>
       </div>
     </div>
 
     </script>
+
+
+    <script type="text/html" id="foodTmpl">
+
+    <style>
+    .demo-card-image.mdl-card#<%=name%>{
+      width: 260px;
+      height: 260px;
+      background: url(<%= image %>) center / cover;
+       border-radius: 10px;
+
+    }
+    .demo-card-image > .mdl-card__actions {
+      height: 52px;
+      padding-bottom: 25px;
+      background: #ededed;
+        }
+
+    .demo-card-image__filename {
+      color: #ff6562;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  </style>
+
+    <div class="demo-card-image mdl-card mdl-shadow--2dp" id="<%=name%>" class="food">
+      <div class="mdl-card__title mdl-card--expand"></div>
+      <div class="mdl-card__actions">
+        <span class="demo-card-image__filename"><%= title %></span>
+      </div>
+    </div>
+
+    </script>
+
+    <script type="text/html" id="weaponTmpl">
+
+    <style>
+    .demo-card-image.mdl-card#<%=name%>{
+      width: 260px;
+      height: 260px;
+      background: url(<%= image %>) center / cover;
+      border-radius: 10px;
+    }
+    .demo-card-image > .mdl-card__actions {
+      height: 52px;
+      padding-bottom: 25px;
+      background: #ededed;
+    }
+    .demo-card-image__filename {
+      color: #ff6562;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    </style>
+
+    <div class="demo-card-image mdl-card mdl-shadow--2dp nextpage" id="<%=name%>">
+      <div class="mdl-card__title mdl-card--expand"></div>
+      <div class="mdl-card__actions">
+        <span class="demo-card-image__filename"><%= title %></span>
+      </div>
+    </div>
+
+    </script>
+
+    <script type="text/html" id="nannyTmpl">
+
+    <style>
+    .demo-card-image.mdl-card#<%=name%>{
+      width: 260px;
+      height: 260px;
+      background: url(<%= image %>) center / cover;
+      border-radius: 10px;
+    }
+    .demo-card-image > .mdl-card__actions {
+      height: 52px;
+      padding-bottom: 25px;
+      background: #ededed;
+    }
+    .demo-card-image__filename {
+      color: #ff6562;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    </style>
+
+    <div class="demo-card-image mdl-card mdl-shadow--2dp nextpage" id="<%=name%>">
+      <div class="mdl-card__title mdl-card--expand"></div>
+      <div class="mdl-card__actions">
+        <span class="demo-card-image__filename"><%= title %></span>
+      </div>
+    </div>
+
+    </script>
+
+    <script type="text/html" id="drinkTmpl">
+
+    <style>
+    .demo-card-image.mdl-card#<%=name%>{
+      width: 260px;
+      height: 260px;
+      background: url(<%= image %>) center / cover;
+      border-radius: 10px;
+    }
+    .demo-card-image > .mdl-card__actions {
+      height: 52px;
+      padding-bottom: 25px;
+      background: #ededed;
+    }
+    .demo-card-image__filename {
+      color: #ff6562;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    </style>
+
+    <div class="demo-card-image mdl-card mdl-shadow--2dp nextpage" id="<%=name%>">
+      <div class="mdl-card__title mdl-card--expand"></div>
+      <div class="mdl-card__actions">
+        <span class="demo-card-image__filename"><%= title %></span>
+      </div>
+    </div>
+
+    </script>
+
   </head>
   <body>
+
+
 
 <section class="container">
 
@@ -43,7 +172,7 @@
 
 
           <h1>The Middle-Aged HouseWife Game</h1>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+          <button class="mdl-button mdl-js-button">
           OMG, Let's Play!
           </button>
           <img src="http://lmaolyfe.com/wp-content/uploads/2015/07/tumblr_m5sdvhN6Rn1r1wdpvo1_500.gif" alt="">
@@ -52,32 +181,51 @@
 
 <section class="page2 hidden">
 
-            <div class="pick">
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-              <p>Pick your housewife!</p>
-              </button>
-            </div>
 
-          <div class="housewives">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col" id="people">
+      <button class="mdl-button mdl-js-button">
+      Choose your Housewife!
+      </button>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col" id="food">
+      <button class="mdl-button mdl-js-button">
+      What's for Dinner?
+      </button>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col" id="weapon">
+      <button class="mdl-button mdl-js-button">
+      Choose your Weapon!
+      </button>
+    </div>
+  </div>
 
-          </div>
 
 </section>
 
 
-<section class="page3">
+<section class="page3 hidden">
 
-<div class="food">
 
-</div>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col" id="nanny">
+      <button class="mdl-button mdl-js-button">
+      Choose your Nanny!
+      </button>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col" id="drink">
+      <button class="mdl-button mdl-js-button">
+      What's your drink of choice?
+      </button>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col" id="points">
+      <button class="mdl-button mdl-js-button">
+      Points!
+      </button>
+    </div>
+  </div>
 
-<div class="weapon">
 
-</div>
-
-<div class="drink">
-
-</div>
 
 </section>
 
