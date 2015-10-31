@@ -1,32 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Syncopate:700);
 body {
-  background-color: #ff6562;
-  font-family: 'Sycopate'; }
+  background: #000; }
 
 .hidden {
   display: none; }
 
 .page1 {
-  width: 100%; }
-  .page1 img {
-    width: 60%;
-    border: 10px solid white;
-    margin-left: 265px;
-    margin-top: 20px;
-    border-radius: 350px;
-    margin-bottom: 50px; }
+  width: 100%;
+  height: auto;
+  background-color: black; }
   .page1 h1 {
-    margin-top: 60px;
-    margin-left: 240px;
+    margin-top: 140px;
+    margin-left: 0px;
     color: white;
+    text-border: 1px solid black;
     font-family: 'Syncopate';
-    font-size: 40px; }
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center; }
+  .page1 span {
+    color: #ff6562;
+    margin-left: 0px;
+    font-size: 84px;
+    text-shadow: none;
+    text-stroke: 0px; }
   .page1 button {
-    margin-left: 600px;
-    font-size: 20px;
+    margin-left: 548px;
+    font-size: 34px;
     font-family: 'Syncopate';
     border-radius: 20px;
-    color: white;
-    margin-top: 10px; }
+    color: #ff6562;
+    margin-top: 20px; }
+
+.page2 {
+  background-color: #ff6562; }
+
+.info {
+  color: white;
+  font-size: 15px;
+  font-family: 'Syncopate';
+  text-align: center; }
+
+.page3 {
+  background-color: #ff6562;
+  height: 2000px; }
 
 .demo-card-image {
   margin-left: 100px;
@@ -37,7 +55,7 @@ body {
   font-family: 'Syncopate';
   font-weight: bold;
   margin-bottom: 30px;
-  margin-left: 120px;
+  margin-left: 95px;
   margin-top: 77px;
   border-radius: 20px;
   color: pink; }
@@ -46,3 +64,33 @@ body {
 
 .mdl-grid {
   margin-top: -57px; }
+
+.points {
+  background-color: #fff;
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 300px;
+  height: 170px;
+  width: 170px;
+  color: black; }
+
+.totalpoints {
+  color: white;
+  font-family: 'Syncopate';
+  font-size: 100px;
+  margin-left: 100px;
+  margin-top: 53px; }
+
+.play {
+  padding: 30px;
+  color: white;
+  background-color: #fff;
+  border-radius: 300px;
+  font-size: 25px;
+  text-align: center;
+  color: black;
+  margin-left: 640px;
+  margin-top: -16px;
+  font-weight: bold;
+  width: 200px;
+  height: 200px; }

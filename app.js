@@ -1,4 +1,9 @@
-
+// var resetButton = document.getElementbyId('resetButton');
+// resetButton.onclick= reloadPage;
+//
+// function reloadPage(){
+//    window.location.reload();
+// }
 
 
 
@@ -6,18 +11,18 @@
 var clicks = 0;
 var player;
 var sandra = new Housewife({name: "Sandra", age: 38, kids: "2 kids", points: 10, image: "http://hate.it/site/assets/files/4464/kim-kardashian2.710x0d0x0.jpg" });
-var patricia = new Housewife({name: "Patricia", age: 40, kids: "4 kids", points: 10, job: "Mary-Kay sales rep", image: "http://www.prettydesigns.com/wp-content/uploads/2013/11/Paris-Hilton-Hairstyles-Lovely-Side-parted-Medium-Haircut.jpg"});
-var janet = new Housewife({name: "Janet", age: 30, kids: "6 kids", job: "secretary", points:10, image: "http://img.thesun.co.uk/aidemitlum/archive/01747/BRITNEY-SPEARS-MAI_1747542a.jpg"});
+var patricia = new Housewife({name: "Patricia", age: 47, kids: "1 kid", points: 10, job: "Mary-Kay sales rep", image: "http://hellogiggles.hellogiggles.netdna-cdn.com/wp-content/uploads/2014/06/23/picture-of-amy-poehler-as-mrs-george-in-mean-girls.jpg"});
+var janet = new Housewife({name: "Janet", age: 30, kids: "6 kids", job: "secretary", points:10, image: "http://i.dailymail.co.uk/i/pix/2010/04/28/article-1269642-09552748000005DC-674_224x300.jpg"});
 
-var pizza = new WhatsForDinner({name: "pizza", title:"pizza!", temp: "warm", howold: "fresh", points: 25, image: "http://cache.boston.com/bonzai-fba/Original_Photo/2011/11/23/pizza__1322067494_5957.jpg"});
-var leftovers = new WhatsForDinner({name: "leftovers", title: "leftovers", temp:" cold of course", howold:"kinda old...", points: -10 , image: "http://hartfc.digitalreachopm.netdna-cdn.com/wp-content/uploads/2015/08/leftovers-can-lead-to-food-waste.jpg?55b424"});
-var vegetables = new WhatsForDinner ({name: "veg", title: "Healthy greens", points: 5, image: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ5LIY3DeoJOBj3C9Lg1fso4nsTl2aR4nqcBtRrtD12YhtmrzvH"});
+var pizza = new WhatsForDinner({name: "pizza", title:"pizza!", temp: "warm", howold: "fresh", points: 25, image: "http://www.clker.com/cliparts/F/g/8/N/k/X/black-question-mark-square-icon-hi.png"});
+var leftovers = new WhatsForDinner({name: "leftovers", title: "leftovers", temp:" cold of course", howold:"kinda old...", points: -10 , image: "http://www.clker.com/cliparts/F/g/8/N/k/X/black-question-mark-square-icon-hi.png"});
+var vegetables = new WhatsForDinner ({name: "veg", title: "Healthy greens", points: 5, image: "http://www.clker.com/cliparts/F/g/8/N/k/X/black-question-mark-square-icon-hi.png"});
 
-var vacuum = new HouseHoldWeapon({name: "vacuum", title: "vacuum", points: 15, image:"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTlEr7ZpjNwCB3qGn2nrZVzmxEb-9yod4SjkAPXIqr5nw10sYzr"});
-var swiffer = new HouseHoldWeapon({name: "swiffer",  title: "Swiffer", points: 20, image:"http://www.adweek.com/agencyspy/files/2011/11/swiffer1-300x300.jpg"});
-var mop = new HouseHoldWeapon({name: "mop", title: "mop",points: -15, image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg9YdnWE1UhM0CZk5uDJfouGdGIQXDlGGyAEYz3KlVaT7yUcQq"});
+var vacuum = new HouseHoldWeapon({name: "vacuum", title: "vacuum", points: 15, image:"http://www.clker.com/cliparts/F/g/8/N/k/X/black-question-mark-square-icon-hi.png"});
+var swiffer = new HouseHoldWeapon({name: "swiffer",  title: "Swiffer", points: 20, image:"http://www.clker.com/cliparts/F/g/8/N/k/X/black-question-mark-square-icon-hi.png"});
+var mop = new HouseHoldWeapon({name: "mop", title: "mop",points: -15, image:"http://www.clker.com/cliparts/F/g/8/N/k/X/black-question-mark-square-icon-hi.png"});
 
-var vodka = new DrinkOfChoice({name: "tequila", title: "tequila shots!",points: 20, image: "http://a57.foxnews.com/global.fncstatic.com/static/managed/img/fn2/video/876/493/tequila_640.jpg?ve=1&tl=1"});
+var tequila = new DrinkOfChoice({name: "tequila", title: "tequila shots!",points: 20, image: "http://a57.foxnews.com/global.fncstatic.com/static/managed/img/fn2/video/876/493/tequila_640.jpg?ve=1&tl=1"});
 var wine = new DrinkOfChoice({name: "wine", title: "pinot grigio",points: 5, image: "http://captaincrab.org/wp-content/uploads/2015/06/pinot.jpg"});
 var cosmo = new DrinkOfChoice({name: "cosmo", title: "basic bitch drink",points: 15, image: "http://bestlowcaloriecocktails.com/wp-content/uploads/2015/05/5434949056_788b0b4450_b.jpg"});
 var water = new DrinkOfChoice({name: "water", title: "water",points: -10, image: "http://www.hobidix.com/wp-content/uploads/4/4-engrossing-water-glass-buy-online-water-grass-hill-go-karting-water-glass-goes-on-which-side-blue-water-glass-grande-prairie-does-water-glass-go-table-setting-glass-water-features-garden-wher.jpg"});
@@ -127,31 +132,40 @@ $('.page1').on('click', 'button',function(){
 
 // page 2
 
-$('#Sandra').on('click', function (){             //housewives clicks
-  $(this).siblings().toggleClass('hidden');
+$('#Sandra').on('click', function (){          //housewives clicks
+$('#Patricia').addClass('hidden');
+$('#Janet').addClass('hidden');
   player = sandra;
+  $('.info').append(sandrainfo);
 
 });
 $('#Patricia').on('click', function (){
-  $(this).siblings().toggleClass('hidden');
+  $('#Sandra').addClass('hidden');
+  $('#Janet').addClass('hidden');
     player= patricia;
+    $('.info').append(patriciainfo);
 });
 $('#Janet').on('click', function (){
-  $(this).siblings().toggleClass('hidden');
+  $('#Sandra').addClass('hidden');
+  $('#Patricia').addClass('hidden');
     player= janet;
+    $('.info').append(janetinfo);
 });
 
 $('#pizza').on('click', function (){
-  $(this).siblings().toggleClass('hidden');
+  $('#veg').addClass('hidden');
+  $('#leftovers').addClass('hidden');
   player.points += pizza.points;              //food clicks
 
 });
 $('#leftovers').on('click', function (){
-  $(this).siblings().toggleClass('hidden');
+  $('#veg').addClass('hidden');
+  $('#pizza').addClass('hidden');
   player.points += leftovers.points;
 });
 $('#veg').on('click', function (){
-  $(this).siblings().toggleClass('hidden');
+  $('#pizza').addClass('hidden');
+  $('#leftovers').addClass('hidden');
   player.points += vegetables.points;
 });
 
@@ -226,12 +240,28 @@ $('#tequila').on('click', function (){
 $('#wine').addClass('hidden');
   $('#water').addClass('hidden');
   $('#cosmo').addClass('hidden');
+  $('.play').removeClass('hidden');
   player.points += tequila.points;
 
 });
 
                         // click button for total points
 $('.points').on('click', function (){
-$('.totalpoints').text(player.points);
+  // var finalpoints ;
+  //  if (player.points <= 30) {
+  //   return finalpoints === "You're not very good at this";
+  // }
+$('.totalpoints').html(parseInt(player.points));
 
+});
+
+
+$('.points').on('click', function(){
+  $('.play').removeClass('hidden');
+});
+
+$('.playagain').on('click', function (){
+  $('.page1').removeClass('hidden');
+  $('.page2').addClass('hidden');
+  $('.page3').toggleClass('hidden');
 });
