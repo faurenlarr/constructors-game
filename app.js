@@ -9,8 +9,6 @@
 
 
 
-
-
 var clicks = 0;
 var player;
 var sandra = new Housewife({name: "Sandra", age: 38, kids: "2 kids", points: 10, image: "http://hate.it/site/assets/files/4464/kim-kardashian2.710x0d0x0.jpg" });
@@ -129,7 +127,7 @@ return housewife.points;
   };
 }
 
-$(document).ready(); {
+$(document).ready(function() {
 
 
 $('.page1').on('click', 'button',function(){
@@ -302,4 +300,4 @@ $('.totalpoints').html(parseInt(player.points));
 // } else { return middleoutcome;}};
 // }
 
-} //end document ready
+}); //end document ready
