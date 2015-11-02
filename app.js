@@ -6,6 +6,7 @@
 // }
 
 
+$(document).ready(function(){
 
 
 
@@ -127,7 +128,10 @@ return housewife.points;
   };
 }
 
+<<<<<<< HEAD
 $(document).ready(function() {
+=======
+>>>>>>> a10573290a32ba8d2e039abd8337e8588c7cae1d
 
 
 $('.page1').on('click', 'button',function(){
@@ -299,5 +303,9 @@ $('.totalpoints').html(parseInt(player.points));
 //  return goodoutcome;
 // } else { return middleoutcome;}};
 // }
+<<<<<<< HEAD
 
 }); //end document ready
+=======
+});
+>>>>>>> a10573290a32ba8d2e039abd8337e8588c7cae1d
