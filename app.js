@@ -4,7 +4,7 @@
 // function reloadPage(){
 //    window.location.reload();
 // }
-$(document).ready(); {
+
 
 
 
@@ -126,7 +126,7 @@ return housewife.points;
   };
 }
 
-
+$(document).ready(); {
 
 
 $('.page1').on('click', 'button',function(){
