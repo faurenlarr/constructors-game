@@ -4,11 +4,10 @@
 // function reloadPage(){
 //    window.location.reload();
 // }
-<<<<<<< HEAD
-$(document).ready();{
-=======
-$(document).ready(); {
->>>>>>> 97c965f24306bcff69d1ab46e15b6f6895e8eed9
+
+
+
+
 
 
 
@@ -130,7 +129,7 @@ return housewife.points;
   };
 }
 
-
+$(document).ready(); {
 
 
 $('.page1').on('click', 'button',function(){
@@ -302,8 +301,5 @@ $('.totalpoints').html(parseInt(player.points));
 //  return goodoutcome;
 // } else { return middleoutcome;}};
 // }
-<<<<<<< HEAD
+
 } //end document ready
-=======
-}
->>>>>>> 97c965f24306bcff69d1ab46e15b6f6895e8eed9
