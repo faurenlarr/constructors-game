@@ -6,6 +6,7 @@
 // }
 
 
+$(document).ready(function(){
 
 
 var clicks = 0;
@@ -126,7 +127,6 @@ return housewife.points;
   };
 }
 
-$(document).ready(function(){
 
 
 $('.page1').on('click', 'button',function(){
