@@ -4,7 +4,7 @@
 // function reloadPage(){
 //    window.location.reload();
 // }
-
+$(document).ready();{
 
 
 
@@ -298,3 +298,4 @@ $('.totalpoints').html(parseInt(player.points));
 //  return goodoutcome;
 // } else { return middleoutcome;}};
 // }
+} //end document ready
