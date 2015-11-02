@@ -126,7 +126,7 @@ return housewife.points;
   };
 }
 
-$(document).ready(); {
+$(document).ready(function(){
 
 
 $('.page1').on('click', 'button',function(){
@@ -298,4 +298,4 @@ $('.totalpoints').html(parseInt(player.points));
 //  return goodoutcome;
 // } else { return middleoutcome;}};
 // }
-}
+});

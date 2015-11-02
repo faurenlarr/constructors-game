@@ -1,4 +1,4 @@
-$(document).ready(); {
+$(document).ready(function (){
 
 var housewifeTemplate = _.template($("#housewifeTmpl").html());
 var foodTemplate = _.template($("#foodTmpl").html());
@@ -29,4 +29,4 @@ var tequilainfo = "Everyone loves a good tequila shot. Your motto these days is 
 var wineinfo = "Gotta have your glass of pinot grigio. Good choice. Especially because it's like totally lower in calories than red wine....so they say... You earn 10 points";
 var waterinfo = "Ew. How dare you choose water. Now you're just going to be sober and miserable. You lose 5 points";
 var cosmoinfo = "How cliche of you to choose a cosmo. Or should we say, 'Basic Bitch Drink' Just try not to start drinking them at noon like you usually do. You earn 5 points";
-}
+});
