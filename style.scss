@@ -126,6 +126,9 @@ height: 500px;
   font-size: 14px;
   font-family: 'Syncopate';
   text-transform: uppercase;
+  p {
+    color: black;
+  }
 
   // text-align: center;
 }
@@ -195,14 +198,12 @@ margin-bottom: 20px;
 }
 #nextpage {
 
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   background-color: white;
-  border-radius: 150px;
-  margin-left: auto;
-  margin-right: auto;
   color: #ff6562;
-  margin-top: -77px;
+  margin-left: 1173px;
+
 }
 #nanny, #drink, #food, #weapon {
   color: white;
@@ -212,14 +213,24 @@ margin-bottom: 20px;
 
 }
 
-// .name {
-//   color: black;
-//   padding: 10px;
-//   font-family: 'Syncopate';
-//   // background-color: #ff6562;
-//   display: block;
-// font-size: 15px;
-//     margin-left: 595px;
-// margin-top: 10px;
-//
-// }
+.demo-card-image.mdl-card {
+  width: 260px;
+  height: 260px;
+  border-radius: 10px;
+  img {
+    width: 100%;
+    height: 264px;
+  }
+}
+
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding-bottom: 25px;
+  background: #ededed;
+    }
+
+.demo-card-image__filename {
+  color: #ff6562;
+  font-size: 12px;
+  font-weight: 500;
+}
