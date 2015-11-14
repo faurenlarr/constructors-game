@@ -1,3 +1,16 @@
+$(document).ready(function(){
+  $('.olive').animate({top:'310px'}, {duration:1000});
+  var tippyGlass = function(){
+    $('.gotoplaces').css('transform', 'rotate(20deg)');
+    $('.gotoplaces').css('transition', 'all .5s ease-in-out');
+  
+
+  };
+  setTimeout(tippyGlass, 1001);
+
+
+});
+
 var resetButton = document.getElementById('reset-button');
 resetButton.onclick = reloadPage;
 
@@ -36,13 +49,16 @@ var martha = new Nanny({name: "martha",title: "Martha", points: -2, image2:"http
 //var goodoutcome = new OutCome ({title: "good outcome", content:"this is good", image: " "});
 //var badoutcome = new OutCome ({title: "bad outcome", image: " ", content: "Bummer! You lose your pharmaceutical prescription. Better luck next time."});
 //
+// $('body').click(function(){
+//   clicks++;
+//   console.log("clicks: " + clicks);
+// });
 
 $('body').on('click', '.demo-card-image', function(){
   $(this).children('img').first().hide();
   $(this).children('.hidden').removeClass('hidden');
 });
 
-// when clicks === 5 ....
 $('body').on('click', '.demo-card-image',function(){
   var nameAttr = $(this).attr('id').toLowerCase();
   console.log(info[nameAttr]);
@@ -53,6 +69,8 @@ $('body').on('click', '.demo-card-image',function(){
   $(this).parent().append(info[nameAttr]);
   myGlobal = $(this);
 });
+
+
 
 function Housewife(options) {
   this.name = options.name || "middle-aged housewife";
@@ -139,7 +157,7 @@ function Nanny(options) {
 
 
 
-$('.page1').on('click', 'button',function(){
+$('.page1').on('click', '.gotoplaces',function(){
   $('.infopage').removeClass('hidden');
   $('.page1').addClass('hidden');
   $('.page2').addClass('hidden');
@@ -160,7 +178,10 @@ $('#Patricia').on('click', function (){
 $('#Janet').on('click', function (){
     player= janet;
 });
-$('.page2').on('click', '#nextpage', function (){     // to to go next page
+$('.page2').on('click', '#nextpage', function (){
+// if ()
+//  { alert ("Make sure you pick one option from each of the categories!") };
+// // to to go next page
 $('.page2').addClass('hidden');
   $('.page3').removeClass('hidden');
 });
