@@ -3,7 +3,7 @@ $(document).ready(function(){
   var tippyGlass = function(){
     $('.gotoplaces').css('transform', 'rotate(20deg)');
     $('.gotoplaces').css('transition', 'all .5s ease-in-out');
-  
+
 
   };
   setTimeout(tippyGlass, 1001);
@@ -188,7 +188,14 @@ $('.page2').addClass('hidden');
 
                         // click button for total points
 $('.points').on('click', function (){
-
 $('.totalpoints').html(parseInt(player.points));
+ if(player.points > 20) {
+    console.log("HELLYEAH YOU WIN A POOL BOY!");
+
+ } else if (player.points < 10) {
+   console.log("try again loser.");
+ } else {
+   console.log("you aren't TOO bad at being a housewife... but youre not the best either.");
+ }
 
 });
